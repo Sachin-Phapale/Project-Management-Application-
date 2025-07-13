@@ -1,0 +1,157 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+  background-color: #343a40;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.task-card {
+  border-left: 4px solid #007bff;
+  transition: transform 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+}
+
+.task-card.priority-1 {
+  border-left-color: #28a745;
+}
+
+.task-card.priority-2 {
+  border-left-color: #17a2b8;
+}
+
+.task-card.priority-3 {
+  border-left-color: #ffc107;
+}
+
+.task-card.priority-4 {
+  border-left-color: #fd7e14;
+}
+
+.task-card.priority-5 {
+  border-left-color: #dc3545;
+}
+
+.task-card.status-todo {
+  background-color: #f8f9fa;
+}
+
+.task-card.status-in-progress {
+  background-color: #e8f4fd;
+}
+
+.task-card.status-review {
+  background-color: #fff3cd;
+}
+
+.task-card.status-done {
+  background-color: #d4edda;
+}
+
+.task-card.status-blocked {
+  background-color: #f8d7da;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-card.projects {
+  background-color: #007bff;
+}
+
+.stat-card.tasks {
+  background-color: #28a745;
+}
+
+.stat-card.overdue {
+  background-color: #dc3545;
+}
+
+.stat-card.completed {
+  background-color: #17a2b8;
+}
+
+.stat-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.stat-card p {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}

@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: project-management-backend
+    runtime: docker
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 8080
+      - key: DB_HOST
+        fromDatabase:
+          name: project_management_db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: project_management_db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: project_management_db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: project_management_db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: project_management_db
+          property: password
+    autoDeploy: true
+
+databases:
+  - name: project_management_db
+    plan: free
+    databaseName: project_management_db

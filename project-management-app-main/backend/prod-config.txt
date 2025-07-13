@@ -1,0 +1,25 @@
+# Database Configuration
+spring.datasource.url=${DATABASE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME:postgres}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD:postgres}
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA / Hibernate Configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.show-sql=false
+
+# Server Configuration
+server.port=${PORT:8080}
+
+# JWT Configuration
+app.jwt.secret=${JWT_SECRET:YourSecretKeyHereMakeItLongAndRandomForProductionEnvironment}
+app.jwt.expiration=86400000
+app.jwt.header=Authorization
+app.jwt.prefix=Bearer 
+
+# Logging
+logging.level.root=WARN
+logging.level.org.springframework=INFO
+logging.level.com.projectmanagement=INFO
+logging.level.org.springframework.web=INFO
